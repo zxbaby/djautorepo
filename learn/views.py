@@ -4,6 +4,9 @@ from django.http import HttpResponse
 from .forms import *
 # Create your views here.
 
+def fronthome(request):
+    return render(request,'btadmin/index.html')
+
 def index(request):
     if request.method == 'POST':
 	form = AddForm(request.POST)
